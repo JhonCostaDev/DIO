@@ -1,6 +1,6 @@
 # DECLARAÇÃO DAS VARIÁVEIS GLOBAIS
 saldo_usuario = 0       # Saldo.
-saques_diario = 3       #Limite de saques diário.
+saques_diario = 3       # Limite de saques diário.
 limite_por_saque = 500  # Limite de valor por saque.
 extrato = ""            # Registro das movimentações do usuário.
 contador_operacoes = 1  # Contador de operações, será utilizado no extrato.
@@ -50,14 +50,13 @@ while atendimento:
             outra_operacao = input(""" 
 Deseja Realizar outra operacao?
 		[1]- SIM
-		[0]-NAO
+		[0]- NAO
 			""")
 
             if outra_operacao == "0":
                 print("Obrigado por utilizar nossos servicos")
                 atendimento = False
-            else:
-                continue
+            
 
 
 # DEPOSITO
@@ -84,8 +83,7 @@ Deseja Realizar outra operacao?
         if outra_operacao == "0":
             print("Obrigado por utilizar nossos servicos")
             atendimento = False
-        else:
-            continue
+        
 
 # EXTRATOS
     elif operacao == "3":
@@ -104,8 +102,7 @@ Deseja Realizar outra operacao?
         if outra_operacao == "0":
             print("Obrigado por utilizar nossos servicos")
             atendimento = False
-        else:
-            continue
+        
 
 # QUEBRA DO LOOP
     elif operacao == "0":
