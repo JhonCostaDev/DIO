@@ -1,41 +1,41 @@
 import java.util.Scanner;
 
 public class Conta {
-    String name, agency;
-    int accountNumber;
-    double balance;
+    String nome, numeroDaAgencia;
+    int numeroDaConta;
+    double saldo;
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     
-    public void setAgency(String agency) {
-        this.agency = agency;
+    public void setNumeroDaAgencia(String numeroDaAgencia) {
+        this.numeroDaAgencia = numeroDaAgencia;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setNumeroDaConta(int numeroDaConta) {
+        this.numeroDaConta = numeroDaConta;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     //################# GET #######################
     
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
     
-    public String getAgency() {
-        return agency;
+    public String getNumeroDaAgencia() {
+        return numeroDaAgencia;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
+    public int getNumeroDaConta() {
+        return numeroDaConta;
     }
 
-    public double getBalance() {
-        return balance;
+    public double getSaldo() {
+        return saldo;
     }
 }
