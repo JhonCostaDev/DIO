@@ -1,4 +1,10 @@
 public class CaixaEletronico {
+    /*
+    for (inicialização; expressãoBooleana; incremento) {
+        // seu código aqui.
+     
+    }
+    */
     public static void main(String[] args) throws Exception {
         double saldo = 150;
         double valorSolicitado = 75.5;
@@ -12,4 +18,6 @@ public class CaixaEletronico {
             System.out.println(saldo);
     }
 }
+
+
 

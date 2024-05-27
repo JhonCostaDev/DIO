@@ -1,4 +1,4 @@
-public class Sigla {
+public class SwitchCaseSigla {
     public static void main(String[] args) {
         String sigla = "M";
 
