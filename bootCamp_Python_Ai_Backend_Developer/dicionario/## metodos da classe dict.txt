@@ -1,0 +1,51 @@
+## metodos da classe dict
+
+.clear
+apaga o dicionario
+
+.copy
+copia um dicionario
+
+.fromkeys
+cria chaves
+* cria chaves sem valor
+* criar um conjunto de chaves com um valor padrão
+
+.get
+acessar valores no dicionario, usado para buscar chaves que não 
+se tem certeza se estão no dicionário
+
+ex:
+dicionario.get(chave)
+pode também receber uma chave vazia (padrão) para caso a chave buscada não seja encontrada.
+dicionario.get(chave, {})
+
+.items
+retorna uma lista de tuplas
+
+.keys
+retorna só as chaves de um dicionário
+
+.pop
+remove e retorna o valor removido do dicionario
+
+* dicionario.pop(cheve, 'nao encontrou')
+
+.popitem
+retira item em sequência
+
+.setdefault
+adiciona um valor caso õ mesmo não exista.
+
+.update
+atualiza o dicionário com outro dicionário
+
+.values
+retorna o valores de um dicionário
+
+in (verificação)
+
+del
+remove um valor de um dicionario
+
+del dicionario[chave]
