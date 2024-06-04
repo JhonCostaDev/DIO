@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
 import java.util.Locale;
+
 public class AboutMe {
     public static void main(String[] args) {
         try {
@@ -17,6 +18,7 @@ public class AboutMe {
             System.out.println("Digite sua altura: ");
             double altura = input.nextDouble();
 
+            System.out.println("########RESULTADO##########");
             System.out.printf("""
                     Seja Bem-Vindo:
                     %s %s
@@ -26,8 +28,8 @@ public class AboutMe {
             );
         }
         catch (InputMismatchException e) {
-            System.out.println("O Campo idade deve ser numérico");
-            System.out.println("O Campo altura deve ser escrito com (.) ponto na sua  parte decimal");
+            System.err.println("O Campo idade deve ser numérico");
+            System.err.println("O Campo altura deve ser escrito com (.) ponto na sua  parte decimal");
         }
     }
 }

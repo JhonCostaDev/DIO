@@ -59,11 +59,12 @@ public class AboutMe {
 ## Conhecendo algumas exceções já mapeadas
 A linguagem java dispõe de uma vasta lista de classes que representam exceções:
 
-|Nome|Causa|
-|java.lang.NullPointerException|Quando tentamos obter alguma informação de uma variável nula.
-|java.lang.ArithmeticException|Quando tentamos dividir um valor por zero.|
-| java.sql.SQLException| Quando existe algum erro relacionado a interação com banco de dados.|
-|java.io.FileNotFoundException| Quand tentamos ler ou escrever em um arquivo que não existe.|
+| Nome | Causa |
+|----|-----|
+|**java.lang.NullPointerException**|Quando tentamos obter alguma informação de uma variável nula.
+|**java.lang.ArithmeticException**|Quando tentamos dividir um valor por zero.|
+|**java.sql.SQLException**| Quando existe algum erro relacionado a interação com banco de dados.|
+|**java.io.FileNotFoundException**| Quand tentamos ler ou escrever em um arquivo que não existe.|
 
 ## Tratamento de exceções
 
