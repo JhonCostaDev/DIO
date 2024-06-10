@@ -52,7 +52,17 @@ Caso contrário imprima
 
 
 
-
+Salario menor: FELIPE
+Salario Maior: MARCIA
+Salario menor: JULIA
+Salario Igual: PAULO
+Salario Maior: AUGUSTO
+Salario menor: MONICA
+Salario Maior: FABRICIO
+Salario Maior: MIRELA
+Salario menor: DANIELA
+Salario Igual: JORGE
+-1
 
 
 
