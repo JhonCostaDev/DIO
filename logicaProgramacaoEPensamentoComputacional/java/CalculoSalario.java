@@ -17,7 +17,7 @@ public class CalculoSalario {
         double salarioLiquido = calculoImposto(salario) + beneficio;
 
         //Exibe o salário final.
-        System.out.println("Salario + Beneficio:" + salarioLiquido);
+        System.out.printf("Salario + Beneficio: R$%.2f\n", salarioLiquido);
     }
 
         //Método para calcular o imposto
@@ -27,7 +27,7 @@ public class CalculoSalario {
         double impostoFaixa2 = salario * 0.1;
         double impostoFaixa3 = salario * 0.15;
         
-        if(salario <= 1100.0) {
+        if(salario >= 0 && salario <= 1100.0) {
             return salario - impostoFaixa1;
         } else if(salario <= 2500.0) {
             return salario - impostoFaixa2;
