@@ -20,17 +20,20 @@ public class SelecaoCandidatos {
 
     public static void selecao(String[] candidato, double[] salario ) {
         double salarioBase = 2000.0;
-        int maxCandidatos = 5;
-
-        for (int i = 0; i < salario.length; i++) {
+        int maxCandidatos = 0;
+        int i = 0;
+        while(i < salario.length && maxCandidatos <= 5) {
             if (salarioBase > salario[i]) {
                 System.out.printf("Salario menor: %s\n", candidato[i]);
-                maxCandidatos --;
+                i ++;
+                maxCandidatos ++;
             } else if (salarioBase == salario[i]){
                 System.out.printf("Salario Igual: %s\n", candidato[i]);
-                maxCandidatos --;
+                i ++;
+                maxCandidatos ++;
             } else {
                 System.out.printf("Salario Maior: %s\n", candidato[i]);
+                i ++;
             }
         }
 
