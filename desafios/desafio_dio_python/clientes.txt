@@ -21,3 +21,13 @@ Data de Nascimento: 10/11/1988
 Endereço: Rua dos Pinheiros, 789
 Telefone: (31) 98765-4321
 Cidade: Belo Horizonte
+
+[{'cpf': '82830019399', 'nome': 'jhon', 'data_nasc': '98-938-2341', 'telefone': '83841903841', 'endereco': ['trvessa', '301', 'bom', 'fort', 'ceara']},
+{'cpf': '12345678901', 'nome': 'João da Silva', 'data_nasc': '15/05/1980', 'telefone': '(11) 98765-4321', 'endereco': ['Rua das Flores, 123', '123', 'bom', 'sao paulo', 'sp']},
+{'cpf': '98765432109', 'nome': 'Maria Oliveira', 'data_nasc': '20/03/1995', 'telefone': '(21) 98765-4321', 'endereco': ['Av. das Palmeiras, 456', '456', 'santa', 'Rio de Janeiro', 'Rio de Janeiro']},
+{'cpf': '54321098765', 'nome': 'Carlos Santos', 'data_nasc': '10/11/1988', 'telefone': '(31) 98765-4321', 'endereco': ['Rua dos Pinheiros, 789', '789', 'otabio', ' Belo Horizonte', 'MG']}]
+
+[{'agencia': '0001', 'conta': '001', 'saldo': 0, 'cpf': '82830019399'},
+{'agencia': '0001', 'conta': '002', 'saldo': 0, 'cpf': '12345678901'},
+{'agencia': '0001', 'conta': '003', 'saldo': 0, 'cpf': '98765432109'},
+{'agencia': '0001', 'conta': '004', 'saldo': 0, 'cpf': '54321098765'}]

@@ -69,10 +69,11 @@ def verificar_cpf(list, cpf_number):
 
     return cpf_ja_cadastrato
 
-def criar_conta(cpf_number):
+def criar_conta(cpf_number, list):
+    contas_na_lista = len(list)
     conta = {
         'agencia': '0001',
-        'conta': contador,
+        'conta': '00' + str(contas_na_lista + 1),
         'saldo': 0,
         'cpf': cpf_number
     }
@@ -117,7 +118,6 @@ def main():
             else:
                 print("Opcao invalida, tente novamente")
 
-
         elif opcao_menu_principal == 2:
             cpf = recebe_cpf()
             if cpf == None:
@@ -142,7 +142,7 @@ def main():
                 print(cadastrar)
                 if cadastrar == True:
                     #TODO:CONTADOR
-                    contas.append(criar_conta(cpf))
+                    contas.append(criar_conta(cpf, contas))
                     print('Conta Criada com Sucesso')
                     opcao_menu_principal = int(menu_inicial())
                 else:
