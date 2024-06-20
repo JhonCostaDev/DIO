@@ -1,0 +1,23 @@
+Cliente 1:
+Nome: João da Silva
+CPF: 12345678901
+Data de Nascimento: 15/05/1980
+Endereço: Rua das Flores, 123
+Telefone: (11) 98765-4321
+Cidade: São Paulo
+
+Cliente 2:
+Nome: Maria Oliveira
+CPF: 98765432109
+Data de Nascimento: 20/03/1995
+Endereço: Av. das Palmeiras, 456
+Telefone: (21) 98765-4321
+Cidade: Rio de Janeiro
+
+Cliente 3:
+Nome: Carlos Santos
+CPF: 54321098765
+Data de Nascimento: 10/11/1988
+Endereço: Rua dos Pinheiros, 789
+Telefone: (31) 98765-4321
+Cidade: Belo Horizonte

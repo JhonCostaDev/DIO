@@ -24,12 +24,12 @@ def menu_servicos():
 def cadastrar_usuario(cpf_number):
     print("Cadastrar usuário")
     nome = input("Digite seu nome\n")
-    data_nasc = input("Digite sua data de nascimento:\n")
-    telefone = input('Digite seu telefone:\n')
+    data_nasc = input("Digite sua data de nascimento no formato(dia/mes/ano) APENAS NÚMEROS:\n")
+    telefone = input('Digite seu telefone no formato (00-0.0000-0000) APENAS NÚMEROS:\n')
 
     logradouro = input("Digite seu endereço(Nome da rua):\n")
-    numero_casa = input("Digite o número da residência:\n")
-    bairro = input('Digite o bairro:\n')
+    numero_casa = input("Digite o número da residência APENAS NÚMEROS:\n")
+    bairro = input('Digite o nome do bairro:\n')
     cidade = input("Digite o nome da cidade: \n")
     estado = input("Digite o nome do Estado: \n")
 
@@ -60,20 +60,24 @@ def recebe_cpf():
 
 def verificar_cpf(list, cpf_number):
     print(cpf_number)
+    cpf_ja_cadastrato = False
     if len(list) == 0:
         return False
     for cpf in list:
-        if cpf.get('cpf') == cpf_number:
-            return True
-        else:
-            return False
+        if cpf['cpf'] == cpf_number: #if cpf.get('cpf') == cpf_number:
+            cpf_ja_cadastrato = True
 
-def criar_conta():
+    return cpf_ja_cadastrato
+
+def criar_conta(cpf_number):
     conta = {
         'agencia': '0001',
-        'conta': 0
+        'conta': contador,
+        'saldo': 0,
+        'cpf': cpf_number
     }
-    return conta 
+
+    return conta
 
 
 # def repetir():
@@ -91,7 +95,7 @@ def visualizar_extrato():
 
 
 def main():
-    clientes = [{'cpf': '828300193919', 'nome': 'jhon', 'data_nasc': '98-938-2341', 'telefone': '83841903841',
+    clientes = [{'cpf': '82830019399', 'nome': 'jhon', 'data_nasc': '98-938-2341', 'telefone': '83841903841',
                  'endereco': ['trvessa', '301', 'bom', 'fort', 'ceara']}]
     #clientes = []
     contas = []
@@ -136,15 +140,17 @@ def main():
             else:
                 cadastrar = verificar_cpf(clientes, cpf)
                 print(cadastrar)
-                if cadastrar == False:
-                    clientes.append(cadastrar_usuario(cpf))
-                    print('Cliente Cadastrado com Sucesso')
+                if cadastrar == True:
+                    #TODO:CONTADOR
+                    contas.append(criar_conta(cpf))
+                    print('Conta Criada com Sucesso')
                     opcao_menu_principal = int(menu_inicial())
                 else:
-                    print('Cliente já Cadastrado')
+                    print('CPF ainda não cadastrado')
                     opcao_menu_principal = int(menu_inicial())
 
     print(clientes)
+    print(contas)
     print("Obrigado por utilizar nossos serviços")
 
 
