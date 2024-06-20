@@ -99,8 +99,13 @@ def clientes_cadastrados(lista_clientes, lista_contas):
     """)
 
 
-def sacar():
+def sacar(lista_clientes, lista_contas):
     print("Sacar")
+    cpf = recebe_cpf()
+    cpf_cadastrado = verificar_cpf(cpf, lista_clientes)
+    if cpf_cadastrado:
+        for cliente in lista_clientes:
+
 
 
 def depositar():
