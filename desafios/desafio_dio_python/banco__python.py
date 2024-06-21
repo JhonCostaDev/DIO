@@ -99,12 +99,17 @@ def clientes_cadastrados(lista_clientes, lista_contas):
     """)
 
 
-def sacar(lista_clientes, lista_contas):
-    print("Sacar")
-    cpf = recebe_cpf()
-    cpf_cadastrado = verificar_cpf(cpf, lista_clientes)
-    if cpf_cadastrado:
-        for cliente in lista_clientes:
+def sacar(lista_clientes, lista_contas, cpf_number):
+
+
+    for cliente in lista_clientes:
+        for conta in lista_contas:
+            if cliente['cpf'] == conta['cpf'] and cliente['cpf'] == str(cpf_number):
+
+                print(f'CPF: {cliente["cpf"]}\nNome: {cliente["nome"]}\nConta: {conta["conta"]}\nSaldo: {conta["saldo"]}')
+                print("\n")
+                conta['saldo'] -= 4000
+                print(f'Novo saldo: {conta.get("saldo")}')
 
 
 
@@ -142,7 +147,10 @@ def main():
             opcao_menu_servicos = int(menu_servicos())
 
             if opcao_menu_servicos == 1:
-                sacar()
+                cpf = recebe_cpf()
+                autorizar_saque = verificar_cpf(clientes, cpf)
+                if autorizar_saque:
+                    sacar(clientes, contas, cpf)
             elif opcao_menu_servicos == 2:
                 depositar()
             elif opcao_menu_servicos == 3:

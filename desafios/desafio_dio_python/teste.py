@@ -122,15 +122,16 @@ def clientes_cadastrados(lista_clientes, lista_contas):
                     Saldo: R$ {conta.get('saldo'):.2f}
 """)
 
-def sacar(lista_clientes, lista_contas):
-    print("Sacar")
-    cpf = recebe_cpf()
-    cpf_cadastrado = verificar_cpf(cpf, lista_clientes)
-    if cpf_cadastrado:
-        for cliente in lista_clientes:
-            for conta in lista_contas:
-                if cliente.get('cpf') == conta.get('cpf'):
-                    cliente_conta = []
+def sacar(lista_clientes, lista_contas, cpf_number):
+    for cliente in lista_clientes:
+        for conta in lista_contas:
+            if cliente['cpf'] == conta['cpf'] and cliente['cpf'] == str(cpf_number):
+
+                print(f'CPF: {cliente["cpf"]}\nNome: {cliente["nome"]}\nConta: {conta["conta"]}\nSaldo: {conta["saldo"]}')
+                print("\n")
+                conta['saldo'] -= 4000
+                print(f'Novo saldo: {conta.get("saldo")}')
+
 
 clientes = [
 {'cpf': '82830019399', 'nome': 'jhon', 'data_nasc': '98-938-2341', 'telefone': '83841903841', 'endereco': ['trvessa', '301', 'bom', 'fort', 'ceara']},
@@ -147,5 +148,10 @@ contas = [
 ]
 '''clientes = []
 contas = []'''
-#clientes_cadastrados(clientes, contas)
+sacar(clientes, contas, 12345678901)
+
+print(contas[1].get('saldo'))
+
+
+
 
