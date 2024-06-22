@@ -100,7 +100,7 @@ print(contas[0].get('conta'))'''
 
 contas = [{'agencia': '0001', 'conta': 1, 'saldo': 0, 'cpf': '12345678901'},
           {'agencia': '0001', 'conta': 1, 'saldo': 0, 'cpf': '98765432109'},
-          {'agencia': '0001', 'conta': 1, 'saldo': 0, 'cpf': '54321098765'}]'''
+          {'agencia': '0001', 'conta': 1, 'saldo': 0, 'cpf': '54321098765'}]
 
 def clientes_cadastrados(lista_clientes, lista_contas):
     numero_clientes = len(lista_clientes)
@@ -131,6 +131,8 @@ def sacar(lista_clientes, lista_contas, cpf_number):
                 print("\n")
                 conta['saldo'] -= 4000
                 print(f'Novo saldo: {conta.get("saldo")}')
+'''
+
 
 
 clientes = [
@@ -141,17 +143,41 @@ clientes = [
 ]
 
 contas = [
-{'agencia': '0001', 'conta': '001', 'saldo': 1490, 'cpf': '82830019399'},
+{'agencia': '0001', 'conta': '001', 'saldo': 1490, 'cpf': '82830019399', 'extrato': []},
 {'agencia': '0001', 'conta': '002', 'saldo': 4678, 'cpf': '12345678901'},
 {'agencia': '0001', 'conta': '003', 'saldo': 16421, 'cpf': '98765432109'},
 {'agencia': '0001', 'conta': '004', 'saldo': 300, 'cpf': '54321098765'}
 ]
-'''clientes = []
-contas = []'''
-sacar(clientes, contas, 12345678901)
+
+imprimir(clientes)
+
+'''
+clientes = []
+contas = []
+extrato = sacar(clientes, contas, 12345678901)
 
 print(contas[1].get('saldo'))
+'''
+
+'''pessoas = [
+    {
+    'nome': 'jose',
+    'altura': 1.78,
+    'peso': 101.0,
+    'cores': []
+},
+{
+    'nome': 'maria',
+    'altura': 1.58,
+    'peso': 76.0,
+    'cores': []
+}
+    ]
+for pessoa in pessoas:
+    print(f"Nome:{pessoa.get('nome')}\nPeso:{pessoa.get('peso')}\n")
 
 
 
 
+for pessoa in pessoas:
+    print(f"Nome:{pessoa.get('nome')}\nPeso:{pessoa.get('peso')}\nCor:{pessoa.get('cores')}")'''

@@ -98,9 +98,17 @@ def clientes_cadastrados(lista_clientes, lista_contas):
                         Saldo: R$ {conta.get('saldo'):.2f}
     """)
 
+def autorizar_saque(saldo_atual):
+    saque_valor = float(input("Digite o valor desejado: \n"))
+    if saque_valor <= 0:
+        print("Por favor, Digite um valor válido maior que 0 (zero)")
+    elif saque_valor > saldo_atual:
+        print("Saldo insulficiente!")
+    else:
+        return saque_valor
 
 def sacar(lista_clientes, lista_contas, cpf_number):
-
+    #extrato = ''
 
     for cliente in lista_clientes:
         for conta in lista_contas:
@@ -108,17 +116,47 @@ def sacar(lista_clientes, lista_contas, cpf_number):
 
                 print(f'CPF: {cliente["cpf"]}\nNome: {cliente["nome"]}\nConta: {conta["conta"]}\nSaldo: {conta["saldo"]}')
                 print("\n")
-                conta['saldo'] -= 4000
+                saldo_atual = conta["saldo"]
+                valor_solicitado = autorizar_saque(saldo_atual)
+                if valor_solicitado == None:
+                    break
+
+                conta['saldo'] -= valor_solicitado
+                print("Saque Autorizado!")
+                print("Contando Cédulas!")
+                print(f'Novo saldo: {conta.get("saldo")}')
+                
+def autorizar_deposito():
+    deposito_valor = float(input("Digite o valor a ser depositado: \n"))
+    if deposito_valor <= 0:
+        print("Por favor, Digite um valor válido maior que 0 (zero)")
+    else:
+        return deposito_valor
+
+
+def depositar(lista_clientes, lista_contas, cpf_number):
+    print("depositar")
+    for cliente in lista_clientes:
+        for conta in lista_contas:
+            if cliente['cpf'] == conta['cpf'] and cliente['cpf'] == str(cpf_number):
+                valor = autorizar_deposito()
+                if valor == None:
+                    break
+                conta['saldo'] += valor
+
+                print("Deposito Realizado")
                 print(f'Novo saldo: {conta.get("saldo")}')
 
 
-
-def depositar():
-    print("depositar")
-
-
-def visualizar_extrato():
+def visualizar_extrato(lista_clientes, lista_contas, cpf_number):
     print("Extrato")
+    for cliente in lista_clientes:
+        for conta in lista_contas:
+            if cliente['cpf'] == conta['cpf'] and cliente['cpf'] == str(cpf_number):
+
+                print(f'CPF: {cliente["cpf"]}\nNome: {cliente["nome"]}\nConta: {conta["conta"]}\nSaldo: {conta["saldo"]}')
+                print("\n")
+
 
 
 def main():
@@ -148,13 +186,21 @@ def main():
 
             if opcao_menu_servicos == 1:
                 cpf = recebe_cpf()
-                autorizar_saque = verificar_cpf(clientes, cpf)
-                if autorizar_saque:
+                cpf_cadastrado = verificar_cpf(clientes, cpf)
+                if cpf_cadastrado:
                     sacar(clientes, contas, cpf)
             elif opcao_menu_servicos == 2:
-                depositar()
+                print("Deposito")
+                cpf = recebe_cpf()
+                cpf_cadastrado = verificar_cpf(clientes, cpf)
+                if cpf_cadastrado:
+                    depositar(clientes, contas, cpf)
+
             elif opcao_menu_servicos == 3:
-                visualizar_extrato()
+                cpf = recebe_cpf()
+                cpf_cadastrado = verificar_cpf(clientes, cpf)
+                if cpf_cadastrado:
+                    visualizar_extrato(clientes, contas, cpf)
             elif opcao_menu_servicos == 0:
                 opcao_menu_principal = int(menu_inicial())
             else:
