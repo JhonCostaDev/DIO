@@ -73,11 +73,11 @@ def criar_conta(cpf_number, list):
         'agencia': '0001',
         'conta': '00' + str(contas_na_lista + 1),
         'saldo': 0,
-        'cpf': cpf_number
+        'cpf': cpf_number,
+        'extrato': []
     }
 
     return conta
-
 
 def clientes_cadastrados(lista_clientes, lista_contas):
     numero_clientes = len(lista_clientes)
@@ -98,14 +98,24 @@ def clientes_cadastrados(lista_clientes, lista_contas):
                         Saldo: R$ {conta.get('saldo'):.2f}
     """)
 
+def valor_valido():
+    while True:
+        valor_solicitado = input("Digite o valor desejado:\n")
+        valor_float = float(valor_solicitado)
+        if valor_float:
+            return float(valor_solicitado)
+        else:
+            print("Entrada Inválida, Digite APENAS NÚMEROS1")
+
 def autorizar_saque(saldo_atual):
-    saque_valor = float(input("Digite o valor desejado: \n"))
-    if saque_valor <= 0:
-        print("Por favor, Digite um valor válido maior que 0 (zero)")
-    elif saque_valor > saldo_atual:
-        print("Saldo insulficiente!")
-    else:
-        return saque_valor
+    while True:
+        saque_valor = valor_valido()
+        if saque_valor <= 0:
+            print("Por favor, Digite um valor válido maior que 0 (zero)")
+        elif saque_valor > saldo_atual:
+            print("Saldo insulficiente!")
+        else:
+            return saque_valor
 
 def sacar(lista_clientes, lista_contas, cpf_number):
     #extrato = ''
@@ -118,14 +128,15 @@ def sacar(lista_clientes, lista_contas, cpf_number):
                 print("\n")
                 saldo_atual = conta["saldo"]
                 valor_solicitado = autorizar_saque(saldo_atual)
-                if valor_solicitado == None:
+                if valor_solicitado is None:
                     break
 
                 conta['saldo'] -= valor_solicitado
+                conta['extrato'].append(f'Saque: R${valor_solicitado:.2f}')
                 print("Saque Autorizado!")
                 print("Contando Cédulas!")
                 print(f'Novo saldo: {conta.get("saldo")}')
-                
+
 def autorizar_deposito():
     deposito_valor = float(input("Digite o valor a ser depositado: \n"))
     if deposito_valor <= 0:
@@ -143,7 +154,7 @@ def depositar(lista_clientes, lista_contas, cpf_number):
                 if valor == None:
                     break
                 conta['saldo'] += valor
-
+                conta['extrato'].append(f'Deposito: R${valor:.2f}')
                 print("Deposito Realizado")
                 print(f'Novo saldo: {conta.get("saldo")}')
 
@@ -173,10 +184,10 @@ def main():
     #clientes = []
     #contas = []
     contas = [
-        {'agencia': '0001', 'conta': '001', 'saldo': 1490, 'cpf': '82830019399'},
-        {'agencia': '0001', 'conta': '002', 'saldo': 4678, 'cpf': '12345678901'},
-        {'agencia': '0001', 'conta': '003', 'saldo': 16421, 'cpf': '98765432109'},
-        {'agencia': '0001', 'conta': '004', 'saldo': 300, 'cpf': '54321098765'}
+        {'agencia': '0001', 'conta': '001', 'saldo': 1490, 'cpf': '82830019399', 'extrato': []},
+        {'agencia': '0001', 'conta': '002', 'saldo': 4678, 'cpf': '12345678901', 'extrato': []},
+        {'agencia': '0001', 'conta': '003', 'saldo': 16421, 'cpf': '98765432109', 'extrato': []},
+        {'agencia': '0001', 'conta': '004', 'saldo': 300, 'cpf': '54321098765', 'extrato': []}
     ]
     opcao_menu_principal = menu_inicial()
 

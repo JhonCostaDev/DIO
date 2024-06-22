@@ -135,7 +135,7 @@ def sacar(lista_clientes, lista_contas, cpf_number):
 
 
 
-clientes = [
+'''clientes = [
 {'cpf': '82830019399', 'nome': 'jhon', 'data_nasc': '98-938-2341', 'telefone': '83841903841', 'endereco': ['trvessa', '301', 'bom', 'fort', 'ceara']},
 {'cpf': '12345678901', 'nome': 'João da Silva', 'data_nasc': '15/05/1980', 'telefone': '(11) 98765-4321', 'endereco': ['Rua das Flores, 123', '123', 'bom', 'sao paulo', 'sp']},
 {'cpf': '98765432109', 'nome': 'Maria Oliveira', 'data_nasc': '20/03/1995', 'telefone': '(21) 98765-4321', 'endereco': ['Av. das Palmeiras, 456', '456', 'santa', 'Rio de Janeiro', 'Rio de Janeiro']},
@@ -149,7 +149,7 @@ contas = [
 {'agencia': '0001', 'conta': '004', 'saldo': 300, 'cpf': '54321098765'}
 ]
 
-imprimir(clientes)
+imprimir(clientes)'''
 
 '''
 clientes = []
@@ -181,3 +181,7 @@ for pessoa in pessoas:
 
 for pessoa in pessoas:
     print(f"Nome:{pessoa.get('nome')}\nPeso:{pessoa.get('peso')}\nCor:{pessoa.get('cores')}")'''
+numero = '1.903'
+numero2 = 1.903
+so_numero = float(numero)
+print(float(numero) == numero2)
