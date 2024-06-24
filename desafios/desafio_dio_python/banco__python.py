@@ -62,7 +62,7 @@ def verificar_cpf(list, cpf_number):
     if len(list) == 0:
         return False
     for cpf in list:
-        if cpf['cpf'] == cpf_number: #if cpf.get('cpf') == cpf_number:
+        if cpf['cpf'] == cpf_number:
             cpf_ja_cadastrato = True
 
     return cpf_ja_cadastrato
