@@ -181,7 +181,36 @@ for pessoa in pessoas:
 
 for pessoa in pessoas:
     print(f"Nome:{pessoa.get('nome')}\nPeso:{pessoa.get('peso')}\nCor:{pessoa.get('cores')}")'''
-numero = '1.903'
+'''numero = '1.903'
 numero2 = 1.903
 so_numero = float(numero)
-print(float(numero) == numero2)
+print(float(numero) == numero2)'''
+#Fortaleza June 24 2024 - Monday
+#=============================================
+
+pessoa = {
+    'nome': 'francisco',
+    'altura': 1.75,
+    'telefone': '85-9879891898',
+    'comidas_favorias': ['arroz', 'feijao', 'goiaba', 'sorvete']
+}
+
+#print(pessoa.get('nome'))
+#print(pessoa['comidas_favorias'])
+
+for comida in pessoa['comidas_favorias']:
+    print(comida)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

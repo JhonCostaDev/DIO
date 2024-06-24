@@ -20,7 +20,7 @@ def menu_servicos():
                 """)
 
 def cadastrar_usuario(cpf_number):
-    print("Cadastrar usuário")
+    print("Cadastrar Novo Cliente")
     nome = input("Digite seu nome\n")
     data_nasc = input("Digite sua data de nascimento no formato(dia/mes/ano) APENAS NÚMEROS:\n")
     telefone = input('Digite seu telefone no formato (00-0.0000-0000) APENAS NÚMEROS:\n')
@@ -54,7 +54,6 @@ def recebe_cpf():
             tentar_novamente = input("1 - Sim\n0 - Não\n")
             if tentar_novamente == '0':
                 break
-
 
 def verificar_cpf(list, cpf_number):
     print(cpf_number)
@@ -98,6 +97,7 @@ def clientes_cadastrados(lista_clientes, lista_contas):
                         Saldo: R$ {conta.get('saldo'):.2f}
     """)
 
+#TODO: REVISAR FUNÇÃO valor_valido
 def valor_valido():
     while True:
         valor_solicitado = input("Digite o valor desejado:\n")
@@ -108,12 +108,15 @@ def valor_valido():
             print("Entrada Inválida, Digite APENAS NÚMEROS1")
 
 def autorizar_saque(saldo_atual):
+    limite_diario_saque = 500
     while True:
         saque_valor = valor_valido()
         if saque_valor <= 0:
             print("Por favor, Digite um valor válido maior que 0 (zero)")
         elif saque_valor > saldo_atual:
             print("Saldo insulficiente!")
+        elif saque_valor > limite_diario_saque:
+            print("Valor Máximo para saque diário: R$ 500,00")
         else:
             return saque_valor
 
@@ -167,8 +170,9 @@ def visualizar_extrato(lista_clientes, lista_contas, cpf_number):
 
                 print(f'CPF: {cliente["cpf"]}\nNome: {cliente["nome"]}\nConta: {conta["conta"]}\nSaldo: {conta["saldo"]}')
                 print("\n")
-
-
+                print("Movimentações")
+                for operacao in conta['extrato']:
+                    print(operacao)
 
 def main():
     clientes = [
@@ -181,8 +185,7 @@ def main():
         {'cpf': '54321098765', 'nome': 'Carlos Santos', 'data_nasc': '10/11/1988', 'telefone': '(31) 98765-4321',
          'endereco': ['Rua dos Pinheiros, 789', '789', 'otabio', ' Belo Horizonte', 'MG']}
     ]
-    #clientes = []
-    #contas = []
+
     contas = [
         {'agencia': '0001', 'conta': '001', 'saldo': 1490, 'cpf': '82830019399', 'extrato': []},
         {'agencia': '0001', 'conta': '002', 'saldo': 4678, 'cpf': '12345678901', 'extrato': []},
@@ -223,7 +226,6 @@ def main():
                 opcao_menu_principal = int(menu_inicial())
             else:
                 cadastrar = verificar_cpf(clientes, cpf)
-                print(cadastrar)
                 if cadastrar == False:
                     clientes.append(cadastrar_usuario(cpf))
                     print('Cliente Cadastrado com Sucesso')
@@ -253,8 +255,7 @@ def main():
         else:
             print('Opção Inválida')
             opcao_menu_principal = menu_inicial()
-    print(clientes)
-    print(contas)
+
     print("Obrigado por utilizar nossos serviços")
 
 
