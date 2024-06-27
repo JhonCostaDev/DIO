@@ -186,3 +186,14 @@ Dienate desses questionamento é que nossas classes precisam continuar mantendo 
 ### Modificador Private
 
 Depois de restruturar nosso estabelecimento(projeto) onde, temos as divisões(pacotes) espaço do cliente e atendimento, chegou a hora de uma reflexão sobre visibilidade.
+
+## GETTERS AND SETTERS
+Seguindo a convensão Java Beans
+
+Os métodos **"Getters"** e **"Setters"** são utilizado para buscar valores de atributos ou definir novos valores de atributos de instância de classes.
+
+O método **Getter** retorna o valor do atributo especificado.
+
+O método **Setter** define outro novo valor para o atributo especificado.
+
+Vemos o código abaixo da criação de um objeto Aluno com nome e idade.
