@@ -197,3 +197,189 @@ O método **Getter** retorna o valor do atributo especificado.
 O método **Setter** define outro novo valor para o atributo especificado.
 
 Vemos o código abaixo da criação de um objeto Aluno com nome e idade.
+
+### Classe Aluno
+
+```java
+public class Aluno {
+    private String nome;
+    private String idade;
+    private String endereco;
+}
+```
+### Classe Escola
+```java
+public class Escola {
+    public static void main(String[] args) {
+        Aluno felipe = new Aluno();
+        felipe.nome = "Felile";
+        felipe.idade = 23;
+    }
+}
+```
+
+Seguindo a convenção Java Beans, uma classe contém uma estrutura que deverá seguir as seguintes regras
+
+* Os atributos precisam ter o modificador de acesso definido como **private**.
+
+* Os atributos estarão visíveis apenas a nível de classe, cria-se os métodos get e set.
+
+### Método Get()
+Responsável por obter o valor atual do atributo, logo ele precisa ter o modificador **public** e retornar o tipo correspôndente ao valor.
+```java
+    public String getNome() {
+        return nome;
+    }
+
+```
+
+### Método set()
+Responsável por definir ou modificar o valor de um atributo em um objeto, logo também precisa ter o modificador **public**, receber parâmetro do mesmo tipo da variável, mas não retorna nenhum valor.
+
+```java
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+```
+## Construtores
+
+O método construtor é um método que não tem retorno, deve ter o mesmo nome da classe a que pertence e com parâmetros daquela classe.
+
+```java
+public class Pessoa {
+    private String nome;
+    private int idade;
+    private double altura;
+
+
+    public Pessoa(nome, idade,altura) {
+        this.nome = nome;
+        this.idade = idade;
+        this. altura = altura;
+    }
+}
+```
+
+## ENUMS
+Enum é um tipo especial de classe onde os objetos são previamente criados, imutáveis e disponíveis por toda aplicação.
+
+Usado quando o modelo de negócio contém objetos de mesmo contexto que já existem de pre-estabelecida com a certeza de não haver tantas alterações de valores.
+
+### Exemplos:
+**Grau de escolaridade**: analfabeto, fundamental, médio e superior.
+**Estado Civil**: Solteiro, Casado, Divorciado, Viúvo.
+**Estados Brasileiros**: Ceará, São Paulo, Bahia.
+
+Enquanto uma constante é uma variável de tipo com valor imutável, um ENUM é um conjunto de objetos já pré-definidos na aplicação.
+
+Sendo um conjunto de objetos, Em um enum pode conter vários atributos e métodos.
+
+### Enum EstadosBrasileiros
+```java
+public enum EstadosBrasileiros {
+    CEARA ("CE", "Fortaleza"),
+    SAO_PAULO ("SP", "sao_Paulo"),
+    BAHIA ("BA", "Salvador"),
+    GOIAIS ("GO", "???");
+
+    private String nome;
+    private String sigla;
+
+    private EstadosBrasileiros(String sigla, String nome) {
+        this.sigla = sigla;
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public String getNomeUpper() {
+        return nome.toUpperCase(); 
+    }
+
+
+}
+```
+
+### Classe SistemaIBGE
+
+```java
+public class SistemaIBGE {
+    public static void main(String [] args) {
+        for(EstadosBrasileiros est: EstadosBrasileiros.values()) {
+            System.out.println(est.getSigla() + " -" + est.getNome);
+        }
+    }
+}
+```
+
+## UML - LINGUAGEM DE MODELAGEM UNIFICADA
+
+É uma notação que possibilita a representação gráfica do projeto.
+
+Na UML existem três conceitos necessários para compreendermos inicialmente
+* Diagramas
+* Elementos
+* Relacionamentos.
+
+As notações UML são distribuidas em duas categorias de diagramas, a estrutural e comportamental conforme listagem:
+
+### Diagramas estruturais
+* Diagrama de classe: É utilizado para fazer a representação de estruturas de classes de negócio, interfaces e outros componentes do sistema. Por esta característica, este diagrama é considerado o mais importante para a UML, pois auxilia a maioria dos demais diagramas.
+
+* Diagrama de objetos: Representa os objetos existentes em um determinaod instante ou fato na aplicação. Assom conseguimos ter uma perspectiva do estado de nossos objetos mediante a interação dos usuários no sistema.
+
+### Diagrama de classe
+Ilustra graficamente como classes serão estruturadas interligadas entre si diante da proposta do software.
+
+É constituida por:
+* Identificação: Nome ou finalidade da classe.
+* Atributos: Propriedade e/ou características
+* Operações: Ações e/ou métodos.
+
+Relacionamentos
+Em um diagrama as classes podem existir de forma independente, mas obviamente haverá em algumas etapas da aplicação a necessidade de algumas se relacionarem, o que devemos compreender é o nível de dependência entre elas:
+
+Associação
+Uma associação define um relacionamento entre duas classes, permitindo que um objeto tenha acesso a estrutura de um outro objeto.
+
+![relacionamento classes](../img/relacionamento.png)
+
+![relacionamento classes](../img/relacionamento2.png)
+
+
+* Agregação: Em uma agregação a classe principal contém uma relação com outra classe, mas ela pode existir sem a classe agregadora. Imagina em um cadastro de Candidatos, podemos encontrar candidatos que ainda não possuam uma profissão.
+
+![relacionamento classes](../img/relacionamento3.png)
+
+* Composição: A composição já caracteriza uma dependência existencial entre a classe principal e a classe associada. Imaginamos que uma admissão só poderá existir contendo  suas informações básicas e a composição do Candidato selecionado.
+
+![relacionamento classes](../img/relacionamento4.png)
+
+### Multiplicidade
+
+Nem sempre o relacionamento entre as classes será **um para um**, um determinado cenário poderá exigir multiplicidades específicas conform opções abaixo:
+
+![relacionamento classes](../img/relacionamento5.png)
+
+### Visibilidade
+
+Os atributos e métodos de uma classe podem receber níveis de visibilidade, Na UML existem símbolos que representam cada um deles.
+
+![relacionamento classes](../img/relacionamento6.png)
+
+
+### REPRESENTAÇÃO
+
+![relacionamento classes](../img/relacionamento7.png)
+
+
+
+
+
