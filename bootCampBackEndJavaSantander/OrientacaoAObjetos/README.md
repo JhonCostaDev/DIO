@@ -381,5 +381,37 @@ Os atributos e métodos de uma classe podem receber níveis de visibilidade, Na 
 
 
 
+## PILARES DA PROGRAMAÇÃO ORIENTADA A OBJETOS
 
+Programação orientead a objetos (POO, ou OOP em inglês) é um paradigma de programação baseado no conceito de "objetos", que podem conter dados na forma de campos, també conhecidos como métodos.
+
+Como se trata de um contexto análog ao mundo real, tudo no qual nos referimos são objetos.
+
+A programaçao oritentada a objetos é bem requisitada no contexto das aplicações mais atuais no mercado devido a possibilidade de reutilização de código e a capacidade de representaçao do sistema ser muito mais próximo do mundo real.
+
+Para uma linguagem ser considerada orientada a objetos, esta deve seguir o que denominamos como **Os quatros pilares da orientação a objetos**:
+
+* **Encapsulamento**: Nem tudo precisa estar visível, grande parte do algoritmo pode ser distribuído em métodos com finalidades específicas que complementa uma ação em nossa aplicação.
+
+* **Herança**: Características e compostamentos comuns podem ser elevados e compartilhados através de uma hierarquia de objetos.
+
+* **Abstração**: É a indisponibilidade para determinar a lógica de um ou vários comportamentos em um objeto.
+
+* **Polimorfismo**: São as inúmeras maneiras de se realizar uma mesma ação.
+
+
+### Prática
+Para ilustrar a proposta dos **Princípios de POO** no nosso cotidiano, vamos simular algumas funcionalidades dos aplicativos de mensagens instantâneas pela internet.
+
+* MSN Messenger.
+Descrever uma UML e depois em código algumas das principais funcionalidades de qualquer serviço de comunicação pela internet, inicialmente pelo MSN e depois inserindo os demais, considerando os princípios de POO.
+
+![UML MSN](../img/msn1.png)
+
+### Pontos de atenção
+
+* Todos os métodos da classe são public (Tudo realmente precisa estar visível?).
+* Só existe uma única forma de se comunicar via internet (Como ter novas formas de se comunicar mantendo a proposta central?)
+
+## ENCAPSULAMENTO
 
