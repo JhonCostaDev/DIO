@@ -77,7 +77,7 @@ public class School {
         estudante2.name = "Sophia";
         estudante2.age = 10;
         estudante2.color = Color.DARK;
-        estudante2.sex = Sex.FEMALE
+        estudante2.sex = Sex.FEMALE;
     }
 }
 ```
@@ -196,7 +196,7 @@ O método **Getter** retorna o valor do atributo especificado.
 
 O método **Setter** define outro novo valor para o atributo especificado.
 
-Vemos o código abaixo da criação de um objeto Aluno com nome e idade.
+Vemos o código abaixo da criação de um objeto Aluno com nome e idade.f
 
 ### Classe Aluno
 
@@ -413,5 +413,44 @@ Descrever uma UML e depois em código algumas das principais funcionalidades de 
 * Todos os métodos da classe são public (Tudo realmente precisa estar visível?).
 * Só existe uma única forma de se comunicar via internet (Como ter novas formas de se comunicar mantendo a proposta central?)
 
-## ENCAPSULAMENTO
+
+## Herança
+![UML redes sociais](../img/msn2.png)
+A implementação acima não seria a melhor alternativa para a proposta de criação das redes sociais.
+
+Além de uma compreensão do desafio, é necessário que tenhamos domínio **dos pilares de POO** e aplicá-los em situações como essa.
+
+**NOTICE** Todas as três classes possuem a mesma estrutura cmportamental, e diante deste contexto se encaixa perfeitamentoo segundo pilar do **POO**, a **Herança**
+
+![UML redes sociais](../img/msn3.png)
+
+## ABSTRAÇÃO
+Todos precisam fazer a mesma coisa e cada um faz a sua maneira
+Em Java o conceito de abstração é representado pela palavra reservada **abstract** e métodos que **NÃO** possuem corpo na classe abstrata(pai).
+### PARA VOCÊ SER, É PRECISO VOCÊ FAZER...
+Sabemos que qualquer sistea de mensagens instantâneas se realiza as mesmas operações comuns ou exclusivas de cada aplicativo disponível no mercado.
+
+Mas será se as ações realizadas contém o mesmo comportamento?
+
+O que val destacar para compreender aqui é que todo e qualquer sistema de mensagem precisa de no mínimo Enviar e Receber Mensagens, logo, consideramos se firmar um "contrato" para qualquer um que queira se apresentar assim para o mercado.
+
+Observe a nova estruturação dos códigos abaixo com base na implementação apresentada no pilar **Herança**.
+
+## POLIMORFISMO
+### Um mesmo comportamento de várias maneiras
+
+Observando no contexto de **Abstração** e **Herança** que se cria uma seingularidade estrutural dos elementos. Isso quer dizer que qualquer classe que deseje representar um serviço de mensagens, basta estender a classe **ServiçosMensagens** e implementar os respectivos métodos abstratos. O que vale reforçar e que cada classe terá a mesma ação executando procedimentos de maneira especializada.
+
+![grafico polimorfismo](../img/poli.webp)
+
+### Modificador Protected
+
+
+## INTERFACE
+
+**NOTICE**: Não é uma interface gráfica
+
+Como foi visto anteriormente,  **Herança** é um dos pilares do **POO**, mas que na linguagem Java não permite o que é conhecido como **Herança Múltipla**.
+
+A medida que vão surgido novas necessidades, novos equipamentos (objetos) nascem para atender as expectativas de oferecer ferramentas e finalidades bem específicas.
 
