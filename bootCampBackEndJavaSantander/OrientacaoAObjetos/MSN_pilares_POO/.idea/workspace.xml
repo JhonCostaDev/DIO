@@ -4,50 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d97aec52-8f4a-4281-8f9c-4efdb0ce4660" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/bootCampBackEndJavaSantander.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/jhonfalcon/poo/ComputadorPedrinho.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/jhonfalcon/poo/servicosmensagens/ServicosMensagens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/jhonfalcon/poo/servicosmensagens/facebook/FacebookMenssenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/jhonfalcon/poo/servicosmensagens/msn/MSNMenssenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/jhonfalcon/poo/servicosmensagens/telegran/TelegranMenssenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/jhonfalcon/poo/servicosmensagensabtract/ServicosMensagensAbstract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../enums_estados_brasileiros/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../enums_estados_brasileiros/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../enums_estados_brasileiros/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../enums_estados_brasileiros/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../enums_estados_brasileiros/enums_estados_brasileiros.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../enums_estados_brasileiros/src/estados/brasileiros/EstadosBrasileiros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../enums_estados_brasileiros/src/estados/brasileiros/SistemaIBGE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/pilares_autodromo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/src/autodromo/Autodromo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/src/autodromo/Carro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/src/autodromo/Moto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pilares_autodromo/src/autodromo/Veiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../polimorfismo/polimorfismo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../polimorfismo/src/edu/jhoncostadev/ComputadorJosy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../polimorfismo/src/edu/jhoncostadev/servicosmensagem/app/FacebookMessenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../polimorfismo/src/edu/jhoncostadev/servicosmensagem/app/MSNMessenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../polimorfismo/src/edu/jhoncostadev/servicosmensagem/app/ServicoMensagem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../polimorfismo/src/edu/jhoncostadev/servicosmensagem/app/TelegranMessenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/jhonfalcon/poo/msn/MSNMenssenger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../enums/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../enums/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../enums/src/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/Estabelecimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/Estabelecimento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/areaCliente/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/areaCliente/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/atendimento/Atendente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/atendimento/Atendente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/atendimento/cozinha/Almoxarife.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/atendimento/cozinha/Almoxarife.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/atendimento/cozinha/Cozinheiro.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lanchonete/bin/lanchonete/atendimento/cozinha/Cozinheiro.class" afterDir="false" />
-    </list>
+    <list default="true" id="d97aec52-8f4a-4281-8f9c-4efdb0ce4660" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,16 +40,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ComputadorPedrinho.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/jonathan/Documents/DIO/bootCampBackEndJavaSantander/OrientacaoAObjetos/MSN_pilares_POO"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ComputadorPedrinho.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jonathan/Documents/DIO/bootCampBackEndJavaSantander/OrientacaoAObjetos/MSN_pilares_POO&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="edu.jhonfalcon.poo" />
