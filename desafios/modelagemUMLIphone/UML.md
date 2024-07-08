@@ -19,13 +19,6 @@ interface Internet {
 }
 
 class Iphone {
-  - modelo: String
-  - numeroSerie: String
-  - armazenamento: int
-  - bateria: int
-  - ligado: boolean
-  - musicaAtual: String
-  - paginaAtual: String
   + ligar()
   + desligar()
   + conectarInternet()
