@@ -1,5 +1,5 @@
 ```mermaind
-@startuml
+
 interface Telefone {
   + ligar()
   + atender()
@@ -36,6 +36,6 @@ class Iphone {
 Iphone -> Telefone
 Iphone -> ReprodutorMusical
 Iphone -> Internet
-@enduml
+
 
 ```
